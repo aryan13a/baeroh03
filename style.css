@@ -190,7 +190,7 @@ header {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  z-index: 100;
+  z-index: 1100;
   display: flex;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -285,6 +285,9 @@ header.header-transparent .search-icon-btn {
   border: none;
   cursor: pointer;
   z-index: 110;
+}
+body.modal-active .menu-toggle {
+  display: none !important;
 }
 
 .menu-toggle span {
@@ -1053,7 +1056,7 @@ footer {
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1010;
+  z-index: 1200;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1063,6 +1066,18 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--color-charcoal);
+  transition: top 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
+}
+
+header.scrolled ~ .project-modal .modal-close {
+  top: 30px;
+}
+
+@media (max-width: 768px) {
+  .modal-close {
+    top: 30px;
+    right: 24px;
+  }
 }
 
 .modal-close span {
@@ -1114,34 +1129,71 @@ footer {
 .modal-meta-col {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 0;
 }
 
 .modal-detail-meta-item {
-  border-top: 1px solid var(--color-sand);
-  padding-top: 16px;
+  border-top: none;
+  padding-top: 0;
+  margin-bottom: 35px;
+}
+
+.modal-detail-meta-item:last-child {
+  margin-bottom: 0;
 }
 
 .modal-detail-meta-item .font-label {
-  color: var(--color-charcoal);
-  margin-bottom: 8px;
+  color: var(--color-olive);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
   display: block;
 }
 
 .modal-detail-meta-item .meta-value {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 300;
-  font-size: 13px;
-  color: var(--color-olive);
+  font-size: 17px;
+  color: var(--color-charcoal);
 }
 
 .modal-narrative-col {
   font-family: var(--font-display);
 }
 
+.modal-narrative-col p {
+  font-size: clamp(18px, 2.3vw, 23px);
+  line-height: 1.8;
+  color: var(--color-charcoal);
+  text-align: left;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.modal-narrative-col p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-narrative-col p.modal-narrative-secondary {
+  text-indent: 100px;
+}
+
 .modal-sidebar-col {
   display: flex;
   flex-direction: column;
+}
+
+.modal-sidebar-caption {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--color-olive);
+  margin-top: 20px;
+  text-align: left;
 }
 
 header.header-transparent ~ .project-modal .modal-close {
