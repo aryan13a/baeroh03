@@ -554,6 +554,21 @@ header.header-transparent .menu-toggle span {
   margin-bottom: 24px;
 }
 
+.narrative-title {
+  font-size: clamp(24px, 3.2vw, 36px);
+  letter-spacing: 0.08em;
+}
+
+.narrative-list li {
+  font-family: var(--font-body);
+}
+
+.narrative-quote {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-style: normal;
+}
+
 .bullet-list {
   list-style: none;
   margin-bottom: 40px;
