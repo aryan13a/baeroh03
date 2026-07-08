@@ -1248,7 +1248,7 @@ header.header-transparent ~ .project-modal .modal-close span::after {
 .recent-grid-row {
   display: flex;
   gap: 3%;
-  width: calc(100% - 80px);
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -1256,18 +1256,15 @@ header.header-transparent ~ .project-modal .modal-close span::after {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  width: 31.3%;
+  text-align: center;
 }
-
-.recent-col.col-46 { width: 45%; }
-.recent-col.col-25 { width: 24%; }
-.recent-col.col-29 { width: 25%; }
-.recent-col.col-50 { width: 46%; }
 
 .recent-img-wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: clamp(280px, 32vw, 480px); /* Uniform height for all images in the row */
+  aspect-ratio: 1 / 1;
   background-color: var(--color-sand);
 }
 
@@ -1285,30 +1282,11 @@ header.header-transparent ~ .project-modal .modal-close span::after {
 
 /* VIEW Overlay on hover (universal for all project images) */
 .recent-img-wrapper::after {
-  content: 'V I E W';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 10px;
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
-  background-color: rgba(62, 49, 43, 0.15);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 2;
-  pointer-events: none;
+  display: none;
 }
 
 .recent-col:hover .recent-img-wrapper::after {
-  opacity: 1;
+  opacity: 0;
 }
 
 .recent-project-title {
@@ -1321,6 +1299,7 @@ header.header-transparent ~ .project-modal .modal-close span::after {
   margin-bottom: 12px;
   color: var(--color-charcoal);
   line-height: 1.4;
+  text-align: center;
 }
 
 .recent-project-desc {
@@ -1330,7 +1309,7 @@ header.header-transparent ~ .project-modal .modal-close span::after {
   line-height: 1.6;
   color: var(--color-olive);
   margin-bottom: 16px;
-  text-align: justify;
+  text-align: center;
 }
 
 .recent-project-meta {

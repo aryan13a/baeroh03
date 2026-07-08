@@ -412,8 +412,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind project clicks
   document.querySelectorAll('[data-project]').forEach(card => {
     card.addEventListener('click', () => {
-      const id = card.getAttribute('data-project');
-      openProject(id);
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      if (currentPage !== 'work.html') {
+        window.location.href = 'work.html';
+      }
     });
   });
 
