@@ -238,19 +238,19 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/unnamed (2).webp'
       ]
     },
-    'dan-bakstudio': {
-      title: 'Dan Bakstudio',
-      subtitle: 'Artisanal Bakery & Cafe',
-      location: 'Varberg, Sweden',
-      year: '2024',
-      category: 'Hospitality / Retail',
+    'sophisticated-meeting-space': {
+      title: 'Sophisticated Meeting Space',
+      subtitle: 'Meeting Space Design',
+      location: 'Jaipur, Rajasthan',
+      year: '2026',
+      category: 'Interior / Meeting Space',
       image: 'assets/unnamed (4).webp',
-      description: 'Conceived as an open and atmospheric bakery in the coastal town of Varberg, Sweden, Dan Bakstudio reimagines the traditional bakery as a space where craftsmanship becomes part of the sensory experience. Rooted in the beauty of everyday rituals, it unfolds as a warm and immersive environment where materiality, movement, and atmosphere come together in harmony.',
-      details: 'The interior balances raw structural concrete walls with soft sand-colored clay plaster finishes. Monolithic travertine counters host the display of artisanal baked goods, while open kitchen views invite guests to observe the baking process. Custom-curated lighting creates shadows and highlights, offering a space that feels deeply connected to the natural rhythms of day and night.',
-      detailsSecondary: 'Warm timber benches and stools invite guests to linger and enjoy the aromas of fresh sourdough. The selection of materials reflects the local coastal environment, ensuring the space feels both grounded and contemporary.',
+      description: 'A contemporary interior that combines bold textures, premium materials, and minimalist aesthetics to create a refined meeting environment. The rich feature wall, elegant furnishings, and warm lighting work together to deliver a space that feels inviting, professional, and timeless. Every detail is thoughtfully curated to enhance comfort, inspire collaboration, and leave a lasting impression.',
+      details: 'Centered around collaboration and corporate excellence, the Sophisticated Meeting Space marries a bold architectural presence with state-of-the-art utility. A premium acoustic timber slatted wall anchors the room, filtering peripheral noise while offering a rich organic backdrop to the custom conference table and ergonomic leather chairs.',
+      detailsSecondary: 'Intelligent warm lighting transitions dynamically across the ceiling to align with presentation modes, enhancing focus and eye comfort. Rich textures and clean structural lines reflect a modern corporate identity that values design, craftsmanship, and professional comfort.',
       photography: 'Common Studio',
       styling: 'Stacy Tsai / Wool Studio',
-      caption: 'Monolithic stone display counter showing the interaction of light, shadow, and tactile finishes inside the bakery.',
+      caption: 'Close-up of the meeting table and wood slatted feature wall, illustrating the harmony of corporate structure and natural materials.',
       gallery: [
         'assets/unnamed (4).webp',
         'assets/unnamed (3).webp'
