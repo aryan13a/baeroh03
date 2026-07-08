@@ -184,19 +184,19 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/unnamed (2).webp'
       ]
     },
-    'composed-matter': {
-      title: 'Composed Matter',
-      subtitle: 'Creative Exhibition',
-      location: 'Galleri Sonja, Denmark',
+    'open-office': {
+      title: 'Sleek and Sophisticated Open Office',
+      subtitle: 'Open Office Design',
+      location: 'Jaipur, Rajasthan',
       year: '2026',
-      category: 'Creative / Exhibitions',
+      category: 'Interior / Workspace',
       image: 'assets/unnamed.webp',
-      description: 'Rooted in a shared appreciation for tactility, craftsmanship and sensory experience, Composed Matter unfolded as a series of installations where eelgrass, light and touch entered into dialogue.',
-      details: 'The installation explored natural ecological materials, including textured cork wall panels and compressed eelgrass screens. The curation prioritized silence, tactile exploration, and negative space. It acted as an experimental sanctuary during the 3daysofdesign exhibition, highlighting sustainable local design craft.',
-      detailsSecondary: 'By showcasing the artistic potential of raw, native materials, the exhibition invited visitors to pause and engage with their surroundings in a quiet, mindful way. The installation serves as a testament to the power of nature-led design.',
+      description: 'A modern workspace that seamlessly blends sleek minimalism with warm, organic elements. The crisp light wood workstations, ergonomic mesh chairs with subtle warm accents, and clean neutral tones create an inviting yet highly professional environment. Thoughtful architectural detailing including a curved accent wall, fluid LED ceiling lights, and delicate hanging greenery adds a touch of timeless sophistication to this focused, comfortable work layout.',
+      details: 'Designed for creative synergy and focused productivity, this Sleek and Sophisticated Open Office merges clean minimalism with warm organic accents. Large modular workstations made from light timber provide spacious areas for individuals and teams, while ergonomic mesh seating ensures maximum comfort.',
+      detailsSecondary: 'Fluid LED strip lighting runs gracefully across the ceiling, accentuating the curves of the architectural walls. Hanging planters soften the structural boundaries, introducing nature to the workspace and fostering a fresh, productive atmosphere.',
       photography: 'Common Studio',
       styling: 'Stacy Tsai / Wool Studio',
-      caption: 'An view of the Composed Matter installation, illustrating the serene play of light on organic textures and cork panels.',
+      caption: 'The open office workstations, demonstrating the fusion of clean minimal desk surfaces, ergonomic chairs, and delicate ceiling greenery.',
       gallery: [
         'assets/unnamed.webp',
         'assets/unnamed (1).webp'
