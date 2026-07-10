@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
       year: '2026',
       category: 'Interior / Meeting Space',
       image: 'assets/unnamed (4).webp',
-      description: 'A contemporary interior that combines bold textures, premium materials, and minimalist aesthetics to create a refined meeting environment. The rich feature wall, elegant furnishings, and warm lighting work together to deliver a space that feels inviting, professional, and timeless. Every detail is thoughtfully curated to enhance comfort, inspire collaboration, and leave a lasting impression.',
+      description: 'Behind these walls, every conversation has the power to shape what comes next. The warm lighting, refined textures, and elegant finishes create an atmosphere where ideas flow naturally and collaboration feels effortless. It\'s a space where first impressions become lasting partnerships, everyday meetings turn into meaningful milestones, and every detail is designed to inspire confidence.',
       details: 'Centered around collaboration and corporate excellence, the Sophisticated Meeting Space marries a bold architectural presence with state-of-the-art utility. A premium acoustic timber slatted wall anchors the room, filtering peripheral noise while offering a rich organic backdrop to the custom conference table and ergonomic leather chairs.',
       detailsSecondary: 'Intelligent warm lighting transitions dynamically across the ceiling to align with presentation modes, enhancing focus and eye comfort. Rich textures and clean structural lines reflect a modern corporate identity that values design, craftsmanship, and professional comfort.',
       photography: 'Common Studio',
