@@ -1580,6 +1580,7 @@ header.header-transparent ~ .project-modal .modal-close span::after {
   letter-spacing: 0.2em;
   color: var(--color-olive);
   opacity: 0.85;
+  margin-top: auto !important;
 }
 
 @media (max-width: 800px) {
