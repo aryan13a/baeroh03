@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       year: '2026',
       category: 'Residential / Interior Styling',
       image: 'assets/unnamed (5).webp',
-      description: 'A beautifully composed space where clean lines, warm lighting, and refined finishes come together effortlessly. Thoughtfully selected furnishings and elegant décor create an inviting atmosphere that reflects sophistication, functionality, and attention to every detail.',
+      description: 'Long before a handshake or a greeting, this space begins telling your story. The warm glow of ambient lighting, elegant finishes, and thoughtfully placed décor quietly assure every visitor they\'ve arrived somewhere special. It\'s a reception that doesn\'t just welcome guests—it introduces the character, care, and craftsmanship behind everything that follows.',
       details: 'Dedicated to the subtle art of space curation, Timeless Design Details represents a synthesis of architectural symmetry, texture, and materiality. Every piece of custom-built shelving and freestanding furniture is arranged to invite interactions, balancing spatial utility with cozy, quiet corners.',
       detailsSecondary: 'Delicate linen drapes diffuse natural sunlight during the day, while strategically placed warm lights illuminate natural stone and oak accents at dusk. This project showcases how minimal styling and high-quality craftsmanship create a home environment that is both modern and welcoming.',
       photography: 'Common Studio',
