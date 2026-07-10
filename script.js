@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
       year: '2026',
       category: 'Interior / Workspace',
       image: 'assets/unnamed (1).webp',
-      description: 'A refined office space that blends warmth, functionality, and modern sophistication. The natural wood desk, soft upholstered chairs, and ambient lighting create a welcoming environment for focused work and meaningful conversations. Clean lines, neutral tones, and thoughtful detailing give the space a timeless aesthetic that feels both professional and comfortable.',
+      description: 'Every morning begins with quiet ambition. As sunlight slips through the curtains, the room awakens with warmth and purpose. The wooden desk patiently waits for the next idea, while the comfortable chairs invite conversations that could spark something extraordinary. Here, every detail plays its part in creating a workspace where productivity feels effortless and success finds its home.',
       details: 'Designed for productivity and quiet contemplation, the Elegant Workspace balances architectural structure with tactile comfort. A custom-crafted natural solid wood desk acts as the anchor of the room, surrounded by ergonomic, softly upholstered lounge chairs that invite relaxed but focused conversations.',
       detailsSecondary: 'Concealed ambient lighting highlights the warm neutral plaster walls, while built-in oak storage keeps the environment minimal and free of clutter. The project reflects a thoughtful approach to corporate and home workspaces, proving that professional settings can feel warm, inviting, and deeply personal.',
       photography: 'Common Studio',
