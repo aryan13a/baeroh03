@@ -148,6 +148,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Project Database
   const projects = {
+    'view-from-the-top': {
+      title: 'The View from the Top',
+      subtitle: 'Executive Workspace Design',
+      location: 'Jaipur, Rajasthan',
+      year: '2026',
+      category: 'Interior / Workspace',
+      image: 'assets/view-from-the-top.jpeg',
+      description: 'True leadership requires clarity, and clarity thrives in a space free from chaos. Looking out across this expansive, warm wood desk, every tool is positioned with deliberate intent—from the seamless tech setup to the rich leather mat holding the essentials of the day\'s work. Through the glass partition, the presence of empty chairs stands as an open invitation for collaboration, strategy, and shared vision. From this vantage point, the noise of the outside world is filtered out, leaving only a quiet, powerful focus where big ideas are refined, decisions are structured, and the future is mapped out piece by piece.',
+      details: 'True leadership requires clarity, and clarity thrives in a space free from chaos. Looking out across this expansive, warm wood desk, every tool is positioned with deliberate intent—from the seamless tech setup to the rich leather mat holding the essentials of the day\'s work.',
+      detailsSecondary: 'Through the glass partition, the presence of empty chairs stands as an open invitation for collaboration, strategy, and shared vision. From this vantage point, the noise of the outside world is filtered out, leaving only a quiet, powerful focus where big ideas are refined, decisions are structured, and the future is mapped out piece by piece.',
+      photography: 'Common Studio',
+      styling: 'Stacy Tsai / Wool Studio',
+      caption: 'Perspective of the executive desk space, showing the integration of leather detailing and functional technology setup.',
+      gallery: [
+        'assets/view-from-the-top.jpeg'
+      ]
+    },
     'gentle-awakening': {
       title: 'The Art of a Gentle Awakening',
       subtitle: 'Bedroom Interior Design',
