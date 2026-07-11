@@ -425,79 +425,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = projects[id];
     if (!data || !modal || !modalContent) return;
 
-    // Dynamically format category: split by / and join with |
-    const formattedCategory = data.category
-      .split('/')
-      .map(s => s.trim().toUpperCase())
-      .join(' \u00a0|\u00a0 ');
+    // Hide original close button and make modal background dark
+    if (modalClose) modalClose.style.display = 'none';
+    modal.style.backgroundColor = 'rgba(15, 12, 10, 0.98)';
+    modal.style.overflow = 'hidden'; // Disable scrollbar for image-only view
 
     modalContent.innerHTML = `
-      <!-- Fullscreen Cover -->
-      <div class="modal-hero-cover" style="position: relative; width: 100%; height: 100vh; overflow: hidden; background-color: var(--color-charcoal);">
-        <div class="modal-cover-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('${data.image}'); background-size: cover; background-position: center; filter: brightness(0.75);"></div>
-        
-        <!-- Hero content overlaid on cover -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 3; color: #ffffff; padding: 0 40px;">
-          <!-- Centered Title & Metadata -->
-          <div style="text-align: center; margin-top: auto; margin-bottom: auto; transform: translateY(40px);">
-            <h1 class="font-display-hero" style="color: #ffffff; font-size: clamp(32px, 5vw, 64px); font-weight: 300; letter-spacing: 0.3em; margin-bottom: 16px; text-transform: uppercase; line-height: 1.3;">${data.title}</h1>
-            <div style="font-family: var(--font-display); font-size: 14px; font-weight: 300; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 15px;">${formattedCategory}</div>
-          </div>
-          
-          <!-- Bottom Description -->
-          <div style="max-width: 800px; text-align: center; margin-bottom: 60px; margin-top: auto;">
-            <p style="font-family: var(--font-body); font-weight: 300; color: rgba(255, 255, 255, 0.95); font-size: clamp(12px, 1.6vw, 13px); line-height: 1.8; text-align: center;">${data.description}</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Scrolled Content Section -->
-      <div class="modal-scrolled-body" style="background-color: var(--color-ivory); padding: 120px 0;">
-        <div class="container" style="max-width: 100%; padding: 0 80px;">
-          <div class="modal-detail-grid">
-            <!-- Left Meta Column -->
-            <div class="modal-meta-col">
-              <div class="modal-detail-meta-item">
-                <span class="font-label">LOCATION</span>
-                <p class="meta-value">${data.location}</p>
-              </div>
-              <div class="modal-detail-meta-item">
-                <span class="font-label">PHOTOGRAPHY</span>
-                <p class="meta-value">${data.photography}</p>
-              </div>
-              <div class="modal-detail-meta-item">
-                <span class="font-label">STYLING</span>
-                <p class="meta-value">${data.styling}</p>
-              </div>
-              <div class="modal-detail-meta-item">
-                <span class="font-label">CATEGORY</span>
-                <p class="meta-value">${data.category}</p>
-              </div>
-              <div class="modal-detail-meta-item">
-                <span class="font-label">YEAR</span>
-                <p class="meta-value">${data.year}</p>
-              </div>
-            </div>
-            
-            <!-- Middle Narrative Column -->
-            <div class="modal-narrative-col">
-              <p>${data.details}</p>
-              ${data.detailsSecondary ? `<p class="modal-narrative-secondary">${data.detailsSecondary}</p>` : ''}
-            </div>
-            
-            <!-- Right Sidebar Image Column -->
-            <div class="modal-sidebar-col">
-              <div style="width: 100%;">
-                <img src="${data.gallery[0] || data.image}" alt="${data.title} detail" style="width: 100%; height: auto; object-fit: contain; display: block;">
-                <p class="modal-sidebar-caption">
-                  ${data.caption}
-                </p>
-              </div>
-            </div>
-          </div>
+      <div class="modal-image-only-wrapper" style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; background-color: rgba(15, 12, 10, 0.98); position: relative; cursor: zoom-out; box-sizing: border-box; padding: 20px;">
+        <div class="modal-image-container" style="position: relative; max-width: 90%; max-height: 90vh; display: inline-block; cursor: default;">
+          <img src="${data.image}" alt="${data.title}" style="max-width: 100%; max-height: 90vh; display: block; object-fit: contain; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border-radius: 4px;">
+          <button class="image-modal-close" aria-label="Close" style="position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.6); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; color: #ffffff; font-size: 24px; line-height: 1; transition: background 0.2s, transform 0.2s; font-family: sans-serif; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+            &times;
+          </button>
         </div>
       </div>
     `;
+
+    // Bind close events
+    const closeBtn = modalContent.querySelector('.image-modal-close');
+    const wrapper = modalContent.querySelector('.modal-image-only-wrapper');
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeProject();
+      });
+      // Hover effects
+      closeBtn.addEventListener('mouseenter', () => {
+        closeBtn.style.background = 'rgba(0, 0, 0, 0.85)';
+        closeBtn.style.transform = 'scale(1.05)';
+      });
+      closeBtn.addEventListener('mouseleave', () => {
+        closeBtn.style.background = 'rgba(0, 0, 0, 0.6)';
+        closeBtn.style.transform = 'scale(1)';
+      });
+    }
+
+    if (wrapper) {
+      wrapper.addEventListener('click', () => {
+        closeProject();
+      });
+    }
 
     modal.classList.add('active');
     document.body.classList.add('modal-active');
@@ -511,6 +479,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('active');
     document.body.classList.remove('modal-active');
     document.body.style.overflow = '';
+    if (modalClose) modalClose.style.display = '';
+    modal.style.backgroundColor = '';
+    modal.style.overflow = '';
     handleScroll();
   };
 
